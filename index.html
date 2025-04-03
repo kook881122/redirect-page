@@ -2,13 +2,68 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>접속 안내</title>
+  <title>시스템 접속 안내</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pretendard&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      height: 100vh;
+      background: linear-gradient(135deg, #111827, #1f2937);
+      font-family: 'Pretendard', sans-serif;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.05);
+      padding: 60px 40px;
+      border-radius: 24px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      animation: fadeIn 1s ease-out;
+    }
+    h1 {
+      font-size: 32px;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+    p {
+      font-size: 18px;
+      margin-bottom: 32px;
+      color: #d1d5db;
+    }
+    .button {
+      font-size: 18px;
+      padding: 14px 36px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 999px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .button:hover {
+      background-color: #2563eb;
+      transform: translateY(-2px);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <h2>접속 안내</h2>
-  <p>아래 버튼을 눌러 시스템에 접속해 주세요.</p>
-  <a href="https://controlware.tccsteel.com:7080/" target="_blank" rel="noopener noreferrer">
-    <button style="font-size: 20px; padding: 10px 20px;">접속하기</button>
-  </a>
+  <div class="card">
+    <h1>시스템 접속 안내</h1>
+    <p>보안상 자동 접속이 차단되어 있습니다.<br>아래 버튼을 클릭해 시스템에 접속해 주세요.</p>
+    <a href="https://controlware.tccsteel.com:7080/" target="_blank" class="button">접속하기</a>
+  </div>
 </body>
 </html>
