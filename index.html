@@ -62,8 +62,21 @@
 <body>
   <div class="card">
     <h1>시스템 접속 안내</h1>
-    <p>보안상 자동 접속이 차단되어 있습니다.<br>아래 버튼을 클릭해 시스템에 접속해 주세요.</p>
-    <a href="https://controlware.tccsteel.com:7080/" target="_blank" class="button">접속하기</a>
+    <p>보안상 자동 접속이 차단되어 있습니다.<br>아래 버튼을 클릭하면 새 창에서 접속됩니다.</p>
+    <button class="button" onclick="redirect()">접속하기</button>
   </div>
+
+  <script>
+    function redirect() {
+      const url = "https://controlware.tccsteel.com:7080/";
+      const a = document.createElement('a');
+      a.href = url;
+      a.rel = "noreferrer";
+      a.target = "_blank";
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+    }
+  </script>
 </body>
 </html>
